@@ -1,4 +1,4 @@
 # JobLister
-A Web app for listing Jobs. 
-
-Technologies used: PHP, MySQL
+Competition is increasing exponentially in today’s world.  The education among the people is so increasing that the jobs for them are now decreasing. Companies want the people who are best in their fields. It becomes difficult to find the people who are intelligent enough to be hired. The work for the companies also increases to find the people who can fulfil their requirements. Thinking about these problems, one can think about the process which can make this work simple.
+This project helps recruiters find suitable candidates for a particular Job Vacancy, as well as, it also helps users to find Jobs as per their interests. The project is created for fulfilling the requests of the company managers so that the recruitment module can be placed in this webpage and the users who visit the website can view the vacancies in the company.
+It also helps users to filter the job listings based on different categories. One can Create, Edit Listings on this webpage. You may also apply for the listed jobs by contacting the person who posted the job via Contact Details mentioned. 
