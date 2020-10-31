@@ -16,5 +16,10 @@ if($category){
   $template->jobs = $job->getAllJobs();
 }
 
+
+
+$template->categories = $job->getCategories();
+
 echo $template;
 
+?>
