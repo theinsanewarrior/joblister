@@ -1,38 +1,42 @@
-<?php include 'inc/header.php'; ?> 
-      <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
+<?php include 'inc/header.php';?>
 
+  <div class="jumbotron">
+          <h1 >Find a Job!</h1>
+    <form action="index.php" method="GET">
+    <select name="category"class="form-control" id="">
+    <option value="0">Choose Category</option>
+
+    <?php foreach($categories as $category) :?>
+    <option value="<?php echo $category->id ;?>">
+    <?php echo $category->name ;?>
+    </option>
+    <?php endforeach ;?>
+    </select>
+    <br>
+    <input type="submit" class="btn btn-lg btn-success" value="FIND">
+    </form>
+    
+  
+  </div>
+
+  
+    <!-- Example row of columns --> 
+  
+      <?php foreach($jobs as $job) :?>
       <div class="row marketing">
-        <div class="col-md-10">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+      <div class="col-md-10">
+        <h2><?php echo $job->job_title ;?></h2>
+        <p><?php echo $job->description ;?></p> 
+        <?php echo "<br>" ;?>
         </div>
-        <div class = "col-md-2">
-          <a class ="btn btn-default" href="#">View</a>
-        </div>
+        <div class="col-md-2">
+        <a class="btn btn-secondary" href="job.php?id=<?php echo $job->id ;?>" role="button">View</a>
+      
       </div>
+    </div>
+    <?php endforeach ;?>
 
-      <div class="row marketing">
-        <div class="col-md-10">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-        <div class = "col-md-2">
-          <a class ="btn btn-default" href="#">View</a>
-        </div>
-      </div>
+<?php include 'inc/footer.php';?>
 
-      <div class="row marketing">
-        <div class="col-md-10">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-        <div class = "col-md-2">
-          <a class ="btn btn-default" href="#">View</a>
-        </div>
-      </div>
 
-<?php include 'inc/footer.php'; ?>
+

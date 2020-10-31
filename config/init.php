@@ -1,9 +1,14 @@
 <?php
-// Config File
+session_start();
+
+
 require_once 'config.php';
 
-// Autoloader
-function __autoload($class_name){
-	require_once 'lib/'.$class_name. '.php';
-}
+require_once 'helpers/system_helper.php';
+
+  spl_autoload_register(function ($class_name){
+
+  require_once 'lib/'.$class_name. '.php';
+
+});
 

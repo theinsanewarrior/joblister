@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>JobLister</title>
-	<link rel = "stylesheet" href="css/bootstrap.css" >
-	<link rel = "stylesheet" href="css/styles.css">
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta
+name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joblister</title> <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/styles.css">
+  
 </head>
 <body>
-	<div class="container">  
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="create.php">Create Listing</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><?php echo SITE_TITLE; ?></h3>
-      </div>
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-dark  bg-dark ">
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="nav nav-pills pull-left">
+    <a href="index.php">
+      <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Home</button></a>
+      <form class="form-inline my-2 my-lg-0" action="create.php">
+      <input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Create Listing">
+     </form>
+     </ul>
+  </div>
+</nav>
+
+<?php displayMessage() ;?>
